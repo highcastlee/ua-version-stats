@@ -1,0 +1,60 @@
+{
+  "name": "ua-version-stats",
+  "version": "1.0.0",
+  "description": "브라우저 사용 통계 분석 도구",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/index.js",
+    "analyze": "npm run build && node dist/index.js data.json",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "test": "jest",
+    "prepare": "husky install",
+    "commit": "cz"
+  },
+  "dependencies": {
+    "commander": "^14.0.0",
+    "inquirer": "^12.6.3",
+    "ua-parser-js": "^1.0.37"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "@types/node": "^20.0.0",
+    "@types/ua-parser-js": "^0.7.39",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "browser-stats",
+    "user-agent",
+    "analytics",
+    "parser"
+  ],
+  "author": "Junseong Kim",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/highcastlee/ua-version-stats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/highcastlee/ua-version-stats/issues"
+  },
+  "homepage": "https://github.com/highcastlee/ua-version-stats#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
