@@ -31,7 +31,11 @@ export const handleSpecialBrowsers = (
     (userAgentString.includes('FBAN/FBIOS') ||
       userAgentString.includes('DaumApps') ||
       userAgentString.includes('KAKAOTALK') ||
-      userAgentString.includes('WorksMobile')) &&
+      userAgentString.includes('WorksMobile') ||
+      userAgentString.includes('CriOS') ||
+      userAgentString.includes('FxiOS') ||
+      userAgentString.includes('EdgiOS') ||
+      userAgentString.includes('OPiOS')) &&
     osName === 'iOS';
 
   // iOS 기반 앱들
